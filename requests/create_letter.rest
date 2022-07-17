@@ -1,0 +1,8 @@
+POST http://localhost:3001/letters
+Content-Type: application/json
+
+{
+    "senderName": "James",
+    "recipientName": "Kevin",
+    "message": "Hi!"
+}
