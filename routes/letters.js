@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { format } = require('date-fns');
 
 const Letter = require('../models/letters');
 
@@ -22,7 +23,7 @@ router.post('/', (req, res) => {
         senderName: req.body.senderName,
         recipientName: req.body.recipientName,
         message: req.body.message,
-        date: new Date()
+        date: format(new Date(), 'MM/dd/yyyy')
     })
 
     letter
